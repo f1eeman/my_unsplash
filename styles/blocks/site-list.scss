@@ -1,0 +1,34 @@
+.site-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include list-reset();
+}
+
+.site-list__item {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.site-list__link-wrapper {
+  @include margin-top-bottom-reset();
+}
+
+.site-list__link {
+  color: $secondary-color-text;
+
+  transition: all linear 0.1s;
+
+  &:hover,
+  &:focus {
+    color: $secondary-color-text-hover;
+  }
+
+  &:active {
+    color: $secondary-color-text-active;
+  }
+}
+
+.site-list__link-text {
+  display: none;
+}

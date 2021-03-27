@@ -1,0 +1,33 @@
+html,
+body {
+  min-width: 375px;
+  margin: 0;
+  padding: 0;
+
+  color: $main-color-text;
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+
+  background-color: $color-main-bg;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

@@ -1,0 +1,35 @@
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 70px;
+  padding-top: 20px;
+}
+
+.main-nav__list {
+  margin-left: 50px;
+}
+
+.main-nav__icon-wrapper {
+  width: 29px;
+  height: 29px;
+
+  @include margin-top-bottom-reset();
+}
+
+.main-nav__text-wrapper {
+  display: none;
+  width: 133px;
+  height: 23px;
+}
+
+.main-nav__logo-icon {
+  width: 29px;
+  height: 29px;
+}
+
+.main-nav__logo-text {
+  width: 133px;
+  height: 23px;
+}
