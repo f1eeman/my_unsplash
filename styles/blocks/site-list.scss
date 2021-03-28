@@ -6,7 +6,7 @@
 }
 
 .site-list__item {
-  margin-left: 30px;
+  margin-left: 22px;
   margin-bottom: 20px;
 }
 
@@ -17,7 +17,7 @@
 .site-list__link {
   color: $secondary-color-text;
 
-  transition: all linear 0.1s;
+  transition: all linear 0.05s;
 
   &:hover,
   &:focus {

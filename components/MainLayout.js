@@ -21,7 +21,7 @@ const MainLayout = ({ children, headTitle='headTitle', mainTitle='mainTitle' }) 
             </a>
           </Link>
           <ul className="main-nav__list site-list">
-          <li className="site-list__item">
+            <li className="site-list__item">
               <p className="site-list__link-wrapper">
                 <Link href="/">
                   <a className="site-list__link">
