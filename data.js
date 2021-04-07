@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
-import { promises as fsp } from 'fs';
+// import { promises as fsp } from 'fs';
 import { uniqueId } from 'lodash';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -19,6 +19,11 @@ const data = [
       desktopView: {
         jpg: path.join(picturesDirectory, 'girl-2-desktop.jpg'),
         webp: path.join(picturesDirectory, 'girl-2-desktop.webp'),
+        'bg-photo-card': path.join(picturesDirectory, 'girl-2-bg-desktop.jpg'),
+        'img-photo-card': {
+          jpg: path.join(picturesDirectory, 'girl-2-photo-card-desktop.jpg'),
+          webp: path.join(picturesDirectory, 'girl-2-photo-card-desktop.webp'),
+        },
       },
     },
     alt: 'Фотография девушки в арке',

@@ -35,7 +35,9 @@
   position: relative;
 
   z-index: 10;
+}
 
+.search__wrapper--shadow-end {
   &::after {
     content: "";
 
@@ -47,6 +49,23 @@
     height: 20px;
 
     background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.95) 30%, rgb(0, 0, 0) 90%);
+
+    z-index: 100;
+  }
+}
+
+.search__wrapper--shadow-start {
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -22px;
+
+    width: 10%;
+    height: 20px;
+
+    background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.95) 30%, rgb(0, 0, 0) 90%);
 
     z-index: 100;
   }
