@@ -19,7 +19,7 @@
 
   &:hover .picture__image,
   &:focus .picture__image {
-    filter: blur(2px);
+    filter: blur(5px);
   }
 }
 
@@ -70,7 +70,7 @@
 
 .picture__author-info {
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 
   text-align: center;
   line-height: 18px;
@@ -94,5 +94,19 @@
 
   .picture__image {
     width: 476px;
+  }
+
+  .picture__author-avatar-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .picture__author-avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .picture__author-info {
+    margin-bottom: 40px;
   }
 }
