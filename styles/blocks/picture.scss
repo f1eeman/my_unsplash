@@ -12,8 +12,8 @@
   overflow: hidden;
   border-radius: 8px;
 
-  &:hover .picture__hover-box,
-  &:focus .picture__hover-box {
+  &:hover .picture__link,
+  &:focus .picture__link {
     display: flex;
   }
 
@@ -23,7 +23,7 @@
   }
 }
 
-.picture__hover-box {
+.picture__link {
   position: absolute;
   top: 0;
   right: 0;
