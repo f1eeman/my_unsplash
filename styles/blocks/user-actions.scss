@@ -1,0 +1,43 @@
+.user-actions {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.user-actions__item {
+  color: $secondary-color-text;
+
+  &:hover,
+  &:focus {
+    color: $secondary-color-text-hover;
+  }
+
+  &:active {
+    color: $secondary-color-text-active;
+  }
+}
+
+.user-actions__item--add-to-favorite {
+  width: 23px;
+  height: 21px;
+  padding: 0;
+
+  color: $secondary-color-text;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.user-actions__item--maximize {
+  width: 37px;
+  height: 36px;
+}
+
+.user-actions__item--download {
+  width: 20px;
+  height: 26px;
+}
