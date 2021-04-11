@@ -1,3 +1,3 @@
-const Photo = () => <h1>Hello PHOTO</h1>;
+const Photo = () => <h1>Hello PHOTO MY ID</h1>;
 
 export default Photo;

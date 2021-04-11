@@ -20,27 +20,27 @@ const Scrollable = ({ children, _class }) => {
           behavior: 'smooth',
         });
         // console.log('e.deltaY', e.deltaY);
-        console.log('el.scrollLeft', el.scrollLeft);
+        // console.log('el.scrollLeft', el.scrollLeft);
         // console.log('el', el);
         if (el.scrollLeftMax <= el.scrollLeft) {
           setScrollingPosition('end');
           // console.log('end');
-          return;
         }
         if (el.scrollLeft <= 10) {
           setScrollingPosition('start');
           // console.log('start');
-          return;
         }
-        setScrollingPosition('center');
+        if (scrollingPosition !== 'center') {
+          setScrollingPosition('center');
+        }
         // console.log('scrollingPosition', scrollingPosition);
       };
+
       el.addEventListener('wheel', handleWheel);
 
       return () => el.removeEventListener('wheel', handleWheel);
     }
   })
-
 
   return (
     <div className={classes}>

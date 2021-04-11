@@ -10,14 +10,16 @@ $color-secondary-bg: rgb(0, 0, 0);
 $opacity-hover: 0.6;
 $opacity-down: 0.3;
 $mobile-width: 375px;
-$mobile-width-only: 767px;
-$tablet-width: 768px;
+$mobile-width-only: 1559px;
 $desktop-width: 1560px;
-$retina-dppx: 1.5dppx;
-
 
 $placeholder-color-text: rgba(133, 37, 37, 0.4);
 $invalid-feedback-color-text: rgb(210, 0, 0);
+$color-btn-toggle-view-first-bg: rgb(189, 189, 189);
+$opacity-btn-toggle-view-hover: 0.5;
+$opacity-btn-toggle-view-active: 0.8;
+$color-btn-toggle-view-first-bg-active: rgb(0, 0, 0);
+$color-btn-toggle-view-second-bg: rgb(255, 255, 255);
 $info-color-text: rgba(68, 68, 68, 0.7);
 $color-text-btn-hover: rgb(255, 255, 255);
 $color-text-btn-active: rgba(255, 255, 255, 0.3);
