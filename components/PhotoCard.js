@@ -39,7 +39,7 @@ const PhotoCard = ({
 
   const renderTags = (tags = null) => {
     if (tags === null) {
-      return null;
+      return <p className="tags__alert">Теги для данной картинки не установлены</p>;;
     }
 
     return (
@@ -53,7 +53,7 @@ const PhotoCard = ({
 
   const renderSimilarPhotos = (tags = null) => {
     if (tags === null) {
-      return null;
+      return <p className="similar-pictures__alert">Похожих картинок не обнаружено</p>;;
     }
 
     return (
