@@ -1,7 +1,7 @@
 import MainLayout from '../components/MainLayout';
 import Searching from '../components/Searching';
 import Photos from '../components/Photos';
-import getPicturesData from '../utilities/data';
+import { getPicturesData } from '../utilities/index';
 
 const Home = ({ picturesData }) => {
   const fuck = 'fuck';

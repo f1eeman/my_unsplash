@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const MainLayout = ({ children, headTitle='headTitle', mainTitle='mainTitle' }) => (
+const MainLayout = ({ children, headTitle='headTitle', mainTitle='mainTitle', innerPage = false }) => (
   <>
     <Head>
       <title>{headTitle}</title>
@@ -13,10 +13,22 @@ const MainLayout = ({ children, headTitle='headTitle', mainTitle='mainTitle' }) 
           <Link href="/">
             <a className="main-nav__logo">
               <p className="main-nav__icon-wrapper">
-                <img className="main-nav__logo-icon" src="images/logo-icon.svg" width="29" height="29" alt="Логотип сервиса ImageStock" />
+                <img
+                  className="main-nav__logo-icon"
+                  src={innerPage ? "../images/logo-icon.svg" : "images/logo-icon.svg"}
+                  width="29"
+                  height="29"
+                  alt="Логотип сервиса ImageStock"
+                />
               </p>
               <p className="main-nav__text-wrapper">
-                <img className="main-nav__logo-text" src="images/logo-text.png" width="133" height="23" alt="Логотип сервиса ImageStock" />
+                <img
+                  className="main-nav__logo-text"
+                  src={innerPage ? "../images/logo-text.png" : "images/logo-text.png"}
+                  width="133"
+                  height="23"
+                  alt="Логотип сервиса ImageStock"
+                />
               </p>
             </a>
           </Link>
@@ -61,7 +73,7 @@ const MainLayout = ({ children, headTitle='headTitle', mainTitle='mainTitle' }) 
         </nav>
       </div>
     </header>
-    <main>
+    <main className="page-main">
       <h1 className="visually-hidden">{mainTitle}</h1>
       {children}
     </main>

@@ -38,7 +38,7 @@ const Photos = ({ picturesData }) => {
           </picture>
         </div>
         <div className="picture__hover-box">
-          <Link href={`/photo/${pictureData.id}`}>
+          <Link href="/photo/[id]" as={`/photo/${pictureData.id}`}>
             <a className="picture__link">
               <p className="picture__author-avatar-wrapper">
                 <picture >
@@ -52,7 +52,7 @@ const Photos = ({ picturesData }) => {
               </p>
               <p className="picture__author-info">
                 Vadim Sadovski
-                <span className="picture__author-account">@vadimsadovski</span>
+                <span className="picture__author-email">@vadimsadovski</span>
               </p>
               <p className="picture__user-actions user-actions">
                 <button
