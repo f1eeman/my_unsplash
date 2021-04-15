@@ -146,19 +146,25 @@ const PhotoCard = ({
   return (
     <>
       <section className="page-main__picture-card picture-card">
-        <h2 className="picture-card__title visually-hidden">Карточка картинки</h2>
-        {renderAuthorBlock()}
-        {renderActions()}
-        {renderPictureItem()}
+        <div className="container">
+          <h2 className="picture-card__title visually-hidden">Карточка картинки</h2>
+          {renderAuthorBlock()}
+          {renderActions()}
+          {renderPictureItem()}
+        </div>
       </section>
       <section className="page-main__tags tags">
-        <h2 className="tags__title">Похожие теги</h2>
-        {renderTags(tags)}
+        <div className="container">
+          <h2 className="tags__title">Похожие теги</h2>
+          {renderTags(tags)}
+        </div>
       </section>
 
       <section className="page-main__similar-pictures similar-pictures">
-        <h2 className="similar-pictures__title">Похожие фотографии</h2>
-        {renderSimilarPhotos(tags)}
+        <div className="container">
+          <h2 className="similar-pictures__title">Похожие фотографии</h2>
+          {renderSimilarPhotos(tags)}
+        </div>
       </section>
     </>
   );
