@@ -1,0 +1,25 @@
+.author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.author__avatar-wrap {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.author__info {
+  margin-top: 0;
+  margin-left: 10px;
+  margin-bottom: 0;
+
+  line-height: 18px;
+}
+
+.author__email {
+  display: block;
+
+  font-size: 14px;
+  color: $color-email-text;
+}

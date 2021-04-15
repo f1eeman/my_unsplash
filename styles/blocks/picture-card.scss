@@ -1,0 +1,81 @@
+.picture-card__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 40px;
+  margin-bottom: 32px;
+}
+
+.picture-card__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100px;
+}
+
+.picture-card__add-favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+
+  border-radius: 8px;
+  box-shadow: 0 0 4px $color-shadow-icons;
+
+  &:hover .picture-card__add-favorite-icon,
+  &:focus .picture-card__add-favorite-icon {
+    transform: scale(1.1);
+  }
+}
+
+.picture-card__add-favorite-icon {
+  width: 27px;
+  height: 21px;
+
+  fill: $bg-first-color-icons;
+  transition: transform 0.2s ease;
+}
+
+.picture-card__download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+
+  background-color: $bg-color-wrapper-icons;
+  border-radius: 8px;
+  box-shadow: 0 0 4px $color-shadow-icons;
+
+  &:hover .picture-card__download-icon,
+  &:focus .picture-card__download-icon {
+    transform: scale(1.1);
+  }
+}
+
+.picture-card__download-icon {
+  width: 20px;
+  height: 26px;
+
+  fill: $bg-second-color-icons;
+  transition: transform 0.2s ease;
+}
+
+.picture-card__image-wrap {
+  width: 330px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0;
+
+  line-height: 0;
+
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.picture__image {
+  width: 330px;
+}
