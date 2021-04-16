@@ -1,14 +1,24 @@
 .main-nav {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  min-height: 70px;
-  padding-top: 20px;
+  min-height: 80px;
 }
 
 .main-nav__list {
   margin-left: 50px;
+}
+
+.main-nav__logo {
+  &:hover,
+  &:focus {
+    opacity: $opacity-hover;
+  }
+
+  &:active {
+    opacity: $opacity-down;
+  }
 }
 
 .main-nav__icon-wrapper {
@@ -20,8 +30,6 @@
 
 .main-nav__text-wrapper {
   display: none;
-  width: 133px;
-  height: 23px;
 }
 
 .main-nav__logo-icon {
@@ -29,7 +37,24 @@
   height: 29px;
 }
 
-.main-nav__logo-text {
-  width: 133px;
-  height: 23px;
+@media (min-width: $desktop-width) {
+  .main-nav__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .main-nav__text-wrapper {
+    display: block;
+    width: 133px;
+    height: 23px;
+
+    @include margin-top-bottom-reset();
+  }
+
+  .main-nav__logo-text {
+    width: 133px;
+    height: 23px;
+    margin-left: 18px;
+  }
 }

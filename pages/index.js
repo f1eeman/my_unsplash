@@ -7,7 +7,7 @@ const Home = ({ picturesData }) => {
   const fuck = 'fuck';
 
   return (
-    <MainLayout headTitle="ImageStock" mainTitle="Страница поиска">
+    <MainLayout headTitle="ImageStock" mainTitle="Страница поиска" searchPage>
       <Searching />
       <Photos picturesData={picturesData}/>
     </MainLayout>

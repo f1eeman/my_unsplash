@@ -2,7 +2,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const MainLayout = ({ children, headTitle='headTitle', mainTitle='mainTitle', innerPage = false }) => (
+const MainLayout = ({
+  children,
+  headTitle='headTitle',
+  mainTitle='mainTitle',
+  innerPage = false,
+  searchPage = false,
+}) => (
   <>
     <Head>
       <title>{headTitle}</title>
@@ -33,18 +39,20 @@ const MainLayout = ({ children, headTitle='headTitle', mainTitle='mainTitle', in
             </a>
           </Link>
           <ul className="main-nav__list site-list">
-            <li className="site-list__item">
-              <p className="site-list__link-wrapper">
-                <Link href="/">
-                  <a className="site-list__link">
-                    <svg className="site-list__link-icon" width="23" height="23" viewBox="0 0 23 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" clipRule="evenodd" d="M15.616 14.6924H16.6364L22.1131 20.1949C22.6426 20.7245 22.6426 21.5899 22.1131 22.1195C21.5835 22.6491 20.7181 22.6491 20.1885 22.1195L14.6989 16.6299V15.6095L14.3501 15.2479C12.5418 16.7979 10.0747 17.5987 7.45264 17.1595C3.8618 16.5524 0.994304 13.5558 0.555137 9.9391C-0.116529 4.47535 4.4818 -0.122984 9.94555 0.548683C13.5622 0.98785 16.5589 3.85535 17.166 7.44618C17.6051 10.0683 16.8043 12.5353 15.2543 14.3437L15.616 14.6924ZM3.07392 8.87993C3.07392 12.0962 5.67017 14.6924 8.88642 14.6924C12.1027 14.6924 14.6989 12.0962 14.6989 8.87993C14.6989 5.66368 12.1027 3.06743 8.88642 3.06743C5.67017 3.06743 3.07392 5.66368 3.07392 8.87993Z" />
-                    </svg>
-                    <span className="site-list__link-text">Поиск</span>
-                  </a>
-                </Link>
-              </p>
-            </li>
+            {searchPage ? null : (
+              <li className="site-list__item">
+                <p className="site-list__link-wrapper">
+                  <Link href="/">
+                    <a className="site-list__link">
+                      <svg className="site-list__link-icon" width="23" height="23" viewBox="0 0 23 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M15.616 14.6924H16.6364L22.1131 20.1949C22.6426 20.7245 22.6426 21.5899 22.1131 22.1195C21.5835 22.6491 20.7181 22.6491 20.1885 22.1195L14.6989 16.6299V15.6095L14.3501 15.2479C12.5418 16.7979 10.0747 17.5987 7.45264 17.1595C3.8618 16.5524 0.994304 13.5558 0.555137 9.9391C-0.116529 4.47535 4.4818 -0.122984 9.94555 0.548683C13.5622 0.98785 16.5589 3.85535 17.166 7.44618C17.6051 10.0683 16.8043 12.5353 15.2543 14.3437L15.616 14.6924ZM3.07392 8.87993C3.07392 12.0962 5.67017 14.6924 8.88642 14.6924C12.1027 14.6924 14.6989 12.0962 14.6989 8.87993C14.6989 5.66368 12.1027 3.06743 8.88642 3.06743C5.67017 3.06743 3.07392 5.66368 3.07392 8.87993Z" />
+                      </svg>
+                      <span className="site-list__link-text">Поиск</span>
+                    </a>
+                  </Link>
+                </p>
+              </li>
+            )}
             <li className="site-list__item">
               <p className="site-list__link-wrapper">
                 <Link href="/favourites">
