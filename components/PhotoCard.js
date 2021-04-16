@@ -24,13 +24,20 @@ const PhotoCard = ({
 
   const renderActions = () => (
     <div className="picture-card__actions">
-      <button className="picture-card__add-favorite btn" type="button" onClick={handleClick}>
-        <svg className="picture-card__add-favorite-icon" width="27" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
+      <button
+        className="picture-card__button picture-card__button--favorite btn"
+        type="button"
+        onClick={handleClick}
+      >
+        <svg className="picture-card__icon picture-card__icon--favorite" width="27" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.0516 20.2443C12.1779 21.0597 10.8329 21.0597 9.95928 20.2325L9.83283 20.1143C3.79765 14.501 -0.145337 10.8257 0.00410514 6.24047C0.0730786 4.23147 1.07319 2.30521 2.69407 1.17072C5.7289 -0.956453 9.47646 0.0362259 11.4997 2.47065C13.5229 0.0362259 17.2705 -0.96827 20.3053 1.17072C21.9262 2.30521 22.9263 4.23147 22.9953 6.24047C23.1562 10.8257 19.2017 14.501 13.1665 20.138L13.0516 20.2443Z"/>
         </svg>
       </button>
-      <button className="picture-card__download btn" type="button">
-        <svg className="picture-card__download-icon" width="20" height="26" viewBox="0 0 20 26" xmlns="http://www.w3.org/2000/svg">
+      <button
+        className="picture-card__button picture-card__button--download btn"
+        type="button"
+      >
+        <svg className="picture-card__icon picture-card__icon--download" width="20" height="26" viewBox="0 0 20 26" xmlns="http://www.w3.org/2000/svg">
           <path fillRule="evenodd" clipRule="evenodd" d="M14.25 9.45837H16.5025C17.7633 9.45837 18.3867 10.9884 17.4942 11.8809L10.9917 18.3834C10.4392 18.9359 9.54668 18.9359 8.99418 18.3834L2.49168 11.8809C1.59918 10.9884 2.23668 9.45837 3.49751 9.45837H5.75001V2.37504C5.75001 1.59587 6.38751 0.958374 7.16668 0.958374H12.8333C13.6125 0.958374 14.25 1.59587 14.25 2.37504V9.45837ZM1.50001 25.0417C0.720844 25.0417 0.0833435 24.4042 0.0833435 23.6251C0.0833435 22.8459 0.720844 22.2084 1.50001 22.2084H18.5C19.2792 22.2084 19.9167 22.8459 19.9167 23.6251C19.9167 24.4042 19.2792 25.0417 18.5 25.0417H1.50001Z" />
         </svg>
       </button>
@@ -135,9 +142,32 @@ const PhotoCard = ({
           <source type="image/webp" media="(min-width: 1560px)" srcSet={imgPhotoCard.webp}/>
           <source type="image/webp" srcSet={pictureItem.path.mobileView.webp} />
           <source media="(min-width: 1560px)" srcSet={imgPhotoCard.jpg} />
-          <img className="picture__image" src={pictureItem.path.mobileView.jpg} alt={pictureItem.alt} />
+          <img className="picture-card__image" src={pictureItem.path.mobileView.jpg} alt={pictureItem.alt} />
         </picture>
+        <button className="picture-card__button picture-card__button--fullscreen btn" type="button">
+          <svg className="picture-card__icon picture-card__icon--fullscreen" width="20" height="20" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+            <path fillRule="evenodd" clipRule="evenodd" d="M1.59835 1.59835C2.30161 0.895088 3.25544 0.5 4.25 0.5H8C8.69036 0.5 9.25 1.05964 9.25 1.75C9.25 2.44036 8.69036 3 8 3H4.25C3.91848 3 3.60054 3.1317 3.36612 3.36612C3.1317 3.60054 3 3.91848 3 4.25V8C3 8.69036 2.44036 9.25 1.75 9.25C1.05964 9.25 0.5 8.69036 0.5 8V4.25C0.5 3.25544 0.895088 2.30161 1.59835 1.59835ZM16.75 1.75C16.75 1.05964 17.3096 0.5 18 0.5H21.75C22.7446 0.5 23.6984 0.895088 24.4017 1.59835C25.1049 2.30161 25.5 3.25544 25.5 4.25V8C25.5 8.69036 24.9404 9.25 24.25 9.25C23.5596 9.25 23 8.69036 23 8V4.25C23 3.91848 22.8683 3.60054 22.6339 3.36612C22.3995 3.1317 22.0815 3 21.75 3H18C17.3096 3 16.75 2.44036 16.75 1.75ZM1.75 16.75C2.44036 16.75 3 17.3096 3 18V21.75C3 22.0815 3.1317 22.3995 3.36612 22.6339C3.60054 22.8683 3.91848 23 4.25 23H8C8.69036 23 9.25 23.5596 9.25 24.25C9.25 24.9404 8.69036 25.5 8 25.5H4.25C3.25544 25.5 2.30161 25.1049 1.59835 24.4017C0.895088 23.6984 0.5 22.7446 0.5 21.75V18C0.5 17.3096 1.05964 16.75 1.75 16.75ZM24.25 16.75C24.9404 16.75 25.5 17.3096 25.5 18V21.75C25.5 22.7446 25.1049 23.6984 24.4017 24.4017C23.6984 25.1049 22.7446 25.5 21.75 25.5H18C17.3096 25.5 16.75 24.9404 16.75 24.25C16.75 23.5596 17.3096 23 18 23H21.75C22.0815 23 22.3995 22.8683 22.6339 22.6339C22.8683 22.3995 23 22.0815 23 21.75V18C23 17.3096 23.5596 16.75 24.25 16.75Z" />
+          </svg>
+        </button>
       </p>
+    );
+  };
+
+  const renderScrollUpButton  = () => {
+    const handleScrollUp = () => {
+      console.log('scroll up');
+    };
+
+    return (
+      <button
+        className="similar-pictures__scroll-up btn"
+        type="button"
+        onClick={handleScrollUp}
+      >
+        <svg className="similar-pictures__scroll-up-icon" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+          <path fillRule="evenodd" clipRule="evenodd" d="M0.429652 6.19931C0.107759 6.5212 0.107759 7.04309 0.429652 7.36499C0.751545 7.68688 1.27344 7.68688 1.59533 7.36499L5.95805 3.00227L5.95805 12.552C5.95805 13.0072 6.32708 13.3762 6.78231 13.3762C7.23753 13.3762 7.60656 13.0072 7.60656 12.552L7.60656 3.00227L11.9693 7.36499C12.2912 7.68688 12.8131 7.68688 13.135 7.36499C13.4568 7.04309 13.4568 6.5212 13.135 6.19931L7.36514 0.429496C7.04325 0.107603 6.52136 0.107603 6.19946 0.429497L0.429652 6.19931Z" />
+        </svg>
+      </button>
     );
   };
 
@@ -146,7 +176,7 @@ const PhotoCard = ({
   return (
     <>
       <section className="page-main__picture-card picture-card">
-        <div className="container">
+        <div className="container container--fix">
           <h2 className="picture-card__title visually-hidden">Карточка картинки</h2>
           <div className="picture-card__wrap">
             {renderAuthorBlock()}
@@ -156,16 +186,17 @@ const PhotoCard = ({
         </div>
       </section>
       <section className="page-main__tags tags">
-        <div className="container">
+        <div className="container container--fix">
           <h2 className="tags__title">Похожие теги</h2>
           {renderTags(tags)}
         </div>
       </section>
 
       <section className="page-main__similar-pictures similar-pictures">
-        <div className="container">
+        <div className="container container--fix">
           <h2 className="similar-pictures__title">Похожие фотографии</h2>
           {renderSimilarPhotos(tags)}
+          {renderScrollUpButton()}
         </div>
       </section>
     </>

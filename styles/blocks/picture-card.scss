@@ -14,56 +14,73 @@
   width: 100px;
 }
 
-.picture-card__add-favorite {
+.picture-card__button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 41px;
-  height: 41px;
 
   border-radius: 8px;
   box-shadow: 0 0 4px $color-shadow-icons;
 
-  &:hover .picture-card__add-favorite-icon,
-  &:focus .picture-card__add-favorite-icon {
+  &:hover .picture-card__icon,
+  &:focus .picture-card__icon {
     transform: scale(1.1);
+  }
+
+  &:active .picture-card__icon {
+    opacity: $opacity-down;
   }
 }
 
-.picture-card__add-favorite-icon {
-  width: 27px;
-  height: 21px;
-
-  fill: $bg-first-color-icons;
-  transition: transform 0.2s ease;
+.picture-card__button--favorite {
+  width: 41px;
+  height: 41px;
 }
 
-.picture-card__download {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.picture-card__button--download {
   width: 41px;
   height: 41px;
 
   background-color: $bg-color-wrapper-icons;
-  border-radius: 8px;
-  box-shadow: 0 0 4px $color-shadow-icons;
-
-  &:hover .picture-card__download-icon,
-  &:focus .picture-card__download-icon {
-    transform: scale(1.1);
-  }
 }
 
-.picture-card__download-icon {
+.picture-card__button--fullscreen {
+  position: absolute;
+  right: 25px;
+  bottom: 17px;
+
+  width: 20px;
+  height: 20px;
+}
+
+.picture-card__icon {
+  transition: transform 0.2s ease;
+}
+
+.picture-card__icon--favorite {
+  width: 27px;
+  height: 21px;
+
+  fill: $bg-first-color-icons;
+}
+
+.picture-card__icon--download {
   width: 20px;
   height: 26px;
 
   fill: $bg-second-color-icons;
-  transition: transform 0.2s ease;
+}
+
+.picture-card__icon--fullscreen {
+  width: 20px;
+  height: 20px;
+
+  fill: $bg-second-color-icons;
 }
 
 .picture-card__image-wrap {
+  position: relative;
+
   width: 330px;
   margin-top: 0;
   margin-right: auto;
@@ -76,6 +93,6 @@
   overflow: hidden;
 }
 
-.picture__image {
+.picture-card__image {
   width: 330px;
 }
