@@ -18,6 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   border-radius: 8px;
   box-shadow: 0 0 4px $color-shadow-icons;
@@ -30,6 +31,10 @@
   &:active .picture-card__icon {
     opacity: $opacity-down;
   }
+}
+
+.picture-card__button-text {
+  display: none;
 }
 
 .picture-card__button--favorite {
@@ -95,4 +100,54 @@
 
 .picture-card__image {
   width: 330px;
+}
+
+@media (min-width: $desktop-width) {
+  .picture-card__image-wrap {
+    width: auto;
+    box-shadow: 0 4px 100px rgb(0, 0, 0);
+  }
+
+  .picture-card__image {
+    width: 100%;
+  }
+
+  .picture-card__actions {
+    width: 275px;
+  }
+
+  .picture-card__button--download {
+    width: 207px;
+    height: 50px;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus {
+      opacity: $opacity-hover;
+    }
+
+    &:active {
+      opacity: $opacity-down;
+    }
+  }
+
+  .picture-card__button-text {
+    display: block;
+    margin-left: 12px;
+
+    font-size: 20px;
+    line-height: 24px;
+    color: $secondary-color-text;
+  }
+
+  .picture-card__button--favorite {
+    width: 50px;
+    height: 50px;
+
+    background-color: $color-main-bg;
+  }
 }

@@ -5,3 +5,10 @@
 .page-main__tags {
   margin-bottom: 33px;
 }
+
+@media (min-width: $desktop-width) {
+  .page-main__tags {
+    position: relative;
+    top: -170px;
+  }
+}

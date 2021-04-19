@@ -25,5 +25,27 @@
 }
 
 .similar-pictures__scroll-up-icon {
+  width: 14px;
+  height: 14px;
+
   fill: $bg-first-color-icons;
+  transition: transform 0.2s ease;
 }
+
+@media (min-width: $desktop-width) {
+  .similar-pictures__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    height: 1510px;
+    margin-left: -18px;
+
+    .similar-pictures__item {
+      margin-left: 18px;
+      margin-right: 0;
+    }
+  }
+}
+

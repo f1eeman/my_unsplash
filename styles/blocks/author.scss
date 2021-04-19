@@ -23,3 +23,25 @@
   font-size: 14px;
   color: $color-email-text;
 }
+
+@media (min-width: $desktop-width) {
+  .author__avatar-wrap--card {
+    width: 55px;
+    height: 55px;
+
+    border: 1px solid $border-color-avatar;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .author__info {
+    color: $color-author-text;
+    font-size: 30px;
+    line-height: 25px;
+  }
+
+  .author__email {
+    font-size: 18px;
+    color: $color-author-text;
+  }
+}
