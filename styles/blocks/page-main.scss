@@ -6,9 +6,20 @@
   margin-bottom: 33px;
 }
 
+.page-main__title {
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+}
+
 @media (min-width: $desktop-width) {
   .page-main__tags {
     position: relative;
     top: -170px;
+  }
+
+  .page-main__title {
+    font-size: 72px;
+    line-height: 86px;
   }
 }

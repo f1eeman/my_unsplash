@@ -4,15 +4,18 @@ import Photos from '../components/Photos';
 import { getPicturesData } from '../utilities/index';
 
 const Home = ({ picturesData }) => {
-  const fuck = 'fuck';
+  const mainTitle = {
+    text: 'Страница поиска',
+    visability: 'hidden',
+  };
 
   return (
-    <MainLayout headTitle="ImageStock" mainTitle="Страница поиска" searchPage>
+    <MainLayout mainTitle={mainTitle} thisPage="searchPage">
       <Searching />
       <Photos picturesData={picturesData}/>
     </MainLayout>
-  )
-};
+  );
+}
 
 export const getStaticProps = async () => {
   const picturesData = await getPicturesData();

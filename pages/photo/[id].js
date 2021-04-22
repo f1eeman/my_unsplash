@@ -11,8 +11,13 @@ const Photo = ({ pictureItem, authorInfo, similarPictures }) => {
   const handleClick = (id) => () => {
     console.log('id', id);
   };
+  const mainTitle = {
+    text: 'Страница картинки',
+    visability: 'hidden',
+  };
+
   return (
-    <MainLayout headTitle="ImageStock" mainTitle="Страница картинки" innerPage >
+    <MainLayout mainTitle={mainTitle} thisPage="innerPage" >
       <PhotoCard
         pictureItem={pictureItem}
         handleClick={handleClick(pictureItem.id)}
