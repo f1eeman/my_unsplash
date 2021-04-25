@@ -1,8 +1,6 @@
-import _ from 'lodash';
-
 const pictures = [
   {
-    id: _.uniqueId(),
+    id: '1',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-2-mobile.jpg',
@@ -19,11 +17,11 @@ const pictures = [
       },
     },
     alt: 'Фотография девушки в арке',
-    authorId: 1,
+    authorId: '1',
     tags: ['Girl', 'Woman', 'Mood', 'People', 'Free Pictures'],
   },
   {
-    id: _.uniqueId(),
+    id: '2',
     path: {
       mobileView: {
         jpg: '/images/pictures/mercedes-mobile.jpg',
@@ -35,10 +33,10 @@ const pictures = [
       },
     },
     alt: 'Эмблема мерседес в кафе',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '3',
     path: {
       mobileView: {
         jpg: '/images/pictures/elephants-mobile.jpg',
@@ -50,10 +48,10 @@ const pictures = [
       },
     },
     alt: 'Фотография слонов на рассвете',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '4',
     path: {
       mobileView: {
         jpg: '/images/pictures/yellow-car-mobile.jpg',
@@ -65,10 +63,10 @@ const pictures = [
       },
     },
     alt: 'Фотография желтого вольксвагена 40-х годов',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '5',
     path: {
       mobileView: {
         jpg: '/images/pictures/tree-mobile.jpg',
@@ -80,10 +78,10 @@ const pictures = [
       },
     },
     alt: 'Фотография завтрака под деревом',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '6',
     path: {
       mobileView: {
         jpg: '/images/pictures/rack-mobile.jpg',
@@ -95,10 +93,10 @@ const pictures = [
       },
     },
     alt: 'Фотография полки с предметами',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '7',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-1-mobile.jpg',
@@ -110,10 +108,10 @@ const pictures = [
       },
     },
     alt: 'Арт-фотография девушки в очках',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '8',
     path: {
       mobileView: {
         jpg: '/images/pictures/records-mobile.jpg',
@@ -125,10 +123,10 @@ const pictures = [
       },
     },
     alt: 'Фотография неоновой надписи Records',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '9',
     path: {
       mobileView: {
         jpg: '/images/pictures/flowers-mobile.jpg',
@@ -140,10 +138,10 @@ const pictures = [
       },
     },
     alt: 'Фотография букета в руках',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '10',
     path: {
       mobileView: {
         jpg: '/images/pictures/man-1-mobile.jpg',
@@ -155,10 +153,10 @@ const pictures = [
       },
     },
     alt: 'Фотография мужчины мужчины перед зеркалом в ванной',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '11',
     path: {
       mobileView: {
         jpg: '/images/pictures/food-1-mobile.jpg',
@@ -170,10 +168,10 @@ const pictures = [
       },
     },
     alt: 'отография еды на столе',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '12',
     path: {
       mobileView: {
         jpg: '/images/pictures/board-mobile.jpg',
@@ -185,10 +183,10 @@ const pictures = [
       },
     },
     alt: 'Фотография таблички со надписью',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '13',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-3-mobile.jpg',
@@ -200,11 +198,11 @@ const pictures = [
       },
     },
     alt: 'Фотография девушки на закате',
-    authorId: 1,
+    authorId: '1',
     tags: ['Girl', 'Woman', 'Mood', 'People', 'Free Pictures'],
   },
   {
-    id: _.uniqueId(),
+    id: '14',
     path: {
       mobileView: {
         jpg: '/images/pictures/yellow-man-mobile.jpg',
@@ -216,10 +214,10 @@ const pictures = [
       },
     },
     alt: 'Фотография человека на дороге',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '15',
     path: {
       mobileView: {
         jpg: '/images/pictures/man-3-mobile.jpg',
@@ -231,10 +229,10 @@ const pictures = [
       },
     },
     alt: 'Фотография отражения мужчины в обломке зеркала',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '16',
     path: {
       mobileView: {
         jpg: '/images/pictures/man-2-mobile.jpg',
@@ -246,10 +244,10 @@ const pictures = [
       },
     },
     alt: 'Картинка фотоаппарата в руках',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '17',
     path: {
       mobileView: {
         jpg: '/images/pictures/food-2-mobile.jpg',
@@ -261,10 +259,10 @@ const pictures = [
       },
     },
     alt: 'Фотография девушки в процессе приготовления пищи',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '18',
     path: {
       mobileView: {
         jpg: '/images/pictures/gtr-mobile.jpg',
@@ -276,10 +274,10 @@ const pictures = [
       },
     },
     alt: 'Фотография белого Nissan GT-R',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '19',
     path: {
       mobileView: {
         jpg: '/images/pictures/terrain-desktop.jpg',
@@ -291,10 +289,10 @@ const pictures = [
       },
     },
     alt: 'Фотография долины и гор',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '20',
     path: {
       mobileView: {
         jpg: '/images/pictures/mountain-desktop.jpg',
@@ -306,10 +304,10 @@ const pictures = [
       },
     },
     alt: 'Фотография гор с высоты',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '21',
     path: {
       mobileView: {
         jpg: '/images/pictures/aged-people-desktop.jpg',
@@ -321,10 +319,10 @@ const pictures = [
       },
     },
     alt: 'Фотография пожилой пары',
-    authorId: 1
+    authorId: '1',
   },
   {
-    id: _.uniqueId(),
+    id: '22',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-8-mobile.jpg',
@@ -336,11 +334,11 @@ const pictures = [
       },
     },
     alt: 'Фотография темноволосой девушки в белой блузке',
-    authorId: 1,
+    authorId: '1',
     tags: ['Girl', 'Woman', 'Mood', 'People', 'Free Pictures'],
   },
   {
-    id: _.uniqueId(),
+    id: '23',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-7-mobile.jpg',
@@ -352,11 +350,11 @@ const pictures = [
       },
     },
     alt: 'Фотография девушки с черной шляпой',
-    authorId: 1,
+    authorId: '1',
     tags: ['Girl', 'Woman', 'Mood', 'People', 'Free Pictures'],
   },
   {
-    id: _.uniqueId(),
+    id: '24',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-10-mobile.jpg',
@@ -368,11 +366,11 @@ const pictures = [
       },
     },
     alt: 'Фотография девушки в полосатой блузке и в шляпе',
-    authorId: 1,
+    authorId: '1',
     tags: ['Girl', 'Woman', 'Mood', 'People', 'Free Pictures'],
   },
   {
-    id: _.uniqueId(),
+    id: '25',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-9-mobile.jpg',
@@ -384,11 +382,11 @@ const pictures = [
       },
     },
     alt: 'Фотография девушки в лучах солнца',
-    authorId: 1,
+    authorId: '1',
     tags: ['Girl', 'Woman', 'Mood', 'People', 'Free Pictures'],
   },
   {
-    id: _.uniqueId(),
+    id: '26',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-11-mobile.jpg',
@@ -400,11 +398,11 @@ const pictures = [
       },
     },
     alt: 'Фотография девушки со сложенными руками',
-    authorId: 1,
+    authorId: '1',
     tags: ['Girl', 'Woman', 'Mood', 'People', 'Free Pictures'],
   },
   {
-    id: _.uniqueId(),
+    id: '27',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-6-mobile.jpg',
@@ -416,11 +414,11 @@ const pictures = [
       },
     },
     alt: 'Фотография девушки среди колосьев в поле',
-    authorId: 1,
+    authorId: '1',
     tags: ['Girl', 'Woman', 'Mood', 'People', 'Free Pictures'],
   },
   {
-    id: _.uniqueId(),
+    id: '28',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-5-mobile.jpg',
@@ -432,11 +430,11 @@ const pictures = [
       },
     },
     alt: 'Фотография девушки в очках и зеленом топе',
-    authorId: 1,
+    authorId: '1',
     tags: ['Girl', 'Woman', 'Mood', 'People', 'Free Pictures'],
   },
   {
-    id: _.uniqueId(),
+    id: '29',
     path: {
       mobileView: {
         jpg: '/images/pictures/girl-4-mobile.jpg',
@@ -448,7 +446,7 @@ const pictures = [
       },
     },
     alt: 'Фотография девушки в ночной иллюминации',
-    authorId: 1,
+    authorId: '1',
     tags: ['Girl', 'Woman', 'Mood', 'People', 'Free Pictures'],
   },
 ];

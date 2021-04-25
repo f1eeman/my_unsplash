@@ -7,7 +7,7 @@ const Favourites = () => {
   const favoritesPicturesIds = useSelector((state) => state.favoriteItems.ids);
   // console.log('favoritesPicturesIds', favoritesPicturesIds);
   const picturesData = favoritesPicturesIds.map((id) => {
-    const pictureData = getPictureDataById(id);
+    const pictureData = getPictureDataById(id.toString());
     return pictureData;
   });
   const mainTitle = {

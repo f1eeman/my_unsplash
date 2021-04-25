@@ -2,10 +2,10 @@ import MainLayout from '../../components/MainLayout';
 import PhotoCard from '../../components/PhotoCard';
 import {
   getAllPicturesIds,
-  getPictureItemById,
-  getAuthorPictureById,
-  getPicturesByTags,
-} from '../../utilities/index';
+  getPictureDataById,
+  getPictureAuthorById,
+  getPicturesDataByTags,
+} from '../../utilities';
 
 const Photo = ({ pictureItem, authorInfo, similarPictures }) => {
   const handleClick = (id) => () => {
@@ -29,15 +29,16 @@ const Photo = ({ pictureItem, authorInfo, similarPictures }) => {
 };
 
 export const getStaticPaths = async () => {
-  const allIds = await getAllPicturesIds();
+  const allIds = getAllPicturesIds();
   const paths = allIds.map((id) => ({ params: id }));
   return { paths, fallback: false };
 };
 
 export const getStaticProps = async ({ params }) => {
-  const pictureItem = await getPictureItemById(params.id);
-  const authorInfo = await getAuthorPictureById(pictureItem.authorId);
-  const similarPictures = await getPicturesByTags(pictureItem.tags);
+  const pictureItem = getPictureDataById(params.id);
+  console.log('pictureItem', pictureItem);
+  const authorInfo = getPictureAuthorById(pictureItem.authorId);
+  const similarPictures = getPicturesDataByTags(pictureItem.tags);
   return {
     props: {
       pictureItem,
