@@ -1,12 +1,44 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
+import { useSelector, useDispatch } from 'react-redux';
+import cn from 'classnames';
+import { addToFavorite, removeFromFavorite } from '../slice';
 
 const PhotoCard = ({
   pictureItem,
-  handleClick,
   authorInfo,
   similarPictures,
 }) => {
+  const dispatch = useDispatch();
+  const favoritesPicturesIdsList = useSelector((state) => state.favoriteItems.ids);
+
+  const getIdPresenceInfoInFavoriteList = (id) => (
+    favoritesPicturesIdsList.includes(Number(id)) ? 'included' : 'absent'
+  );
+  const mapping = {
+    'included': (id) => dispatch(removeFromFavorite({ id })),
+    'absent': (id) => dispatch(addToFavorite({ id })),
+  };
+
+  const { tags = null, id } = pictureItem;
+  const { jpg: defaultBgPhotoCardPath } = pictureItem.path.desktopView;
+  const { bgPhotoCard = defaultBgPhotoCardPath } = pictureItem.path.desktopView;
+
+  const handleUpdateFavoritePicturesIds = (currentId) => (e) => {
+    e.preventDefault();
+    const IdPresenceInfoInFavoriteList = getIdPresenceInfoInFavoriteList(currentId);
+    mapping[IdPresenceInfoInFavoriteList](Number(currentId));
+  };
+
+  const IdPresenceInfoInFavoriteList = getIdPresenceInfoInFavoriteList(pictureItem.id);
+  const buttonUpdateFavoriteListClasses = cn (
+    'picture-card__button',
+    'picture-card__button--favorite',
+    'btn',
+    {
+    'picture-card__button--included-in-favorite': IdPresenceInfoInFavoriteList === 'included',
+  });
+
   const renderAuthorBlock = () => (
       <div className="picture-card__author author">
         <p className="author__avatar-wrap author__avatar-wrap--card">
@@ -25,9 +57,9 @@ const PhotoCard = ({
   const renderActions = () => (
     <div className="picture-card__actions">
       <button
-        className="picture-card__button picture-card__button--favorite btn"
+        className={buttonUpdateFavoriteListClasses}
         type="button"
-        onClick={handleClick}
+        onClick={handleUpdateFavoritePicturesIds(id)}
       >
         <svg className="picture-card__icon picture-card__icon--favorite" width="27" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.0516 20.2443C12.1779 21.0597 10.8329 21.0597 9.95928 20.2325L9.83283 20.1143C3.79765 14.501 -0.145337 10.8257 0.00410514 6.24047C0.0730786 4.23147 1.07319 2.30521 2.69407 1.17072C5.7289 -0.956453 9.47646 0.0362259 11.4997 2.47065C13.5229 0.0362259 17.2705 -0.96827 20.3053 1.17072C21.9262 2.30521 22.9263 4.23147 22.9953 6.24047C23.1562 10.8257 19.2017 14.501 13.1665 20.138L13.0516 20.2443Z"/>
@@ -45,7 +77,7 @@ const PhotoCard = ({
     </div>
   );
 
-  const renderTags = (tags = null) => {
+  const renderTags = () => {
     if (tags === null) {
       return <p className="tags__alert">Теги для данной картинки не установлены</p>;;
     }
@@ -59,7 +91,7 @@ const PhotoCard = ({
     )
   };
 
-  const renderSimilarPhotos = (tags = null) => {
+  const renderSimilarPhotos = () => {
     if (tags === null) {
       return <p className="similar-pictures__alert">Похожих картинок не обнаружено</p>;;
     }
@@ -167,10 +199,6 @@ const PhotoCard = ({
       </button>
     );
   };
-
-  const { tags = null } = pictureItem;
-  const { jpg: defaultBgPhotoCardPath } = pictureItem.path.desktopView;
-  const { bgPhotoCard = defaultBgPhotoCardPath } = pictureItem.path.desktopView;
 
   return (
     <>

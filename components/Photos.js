@@ -47,7 +47,7 @@ const Photos = ({ picturesData }) => {
   const renderPictures = () => (
     picturesData.map((pictureData) => {
       const IdPresenceInfoInFavoriteList = getIdPresenceInfoInFavoriteList(pictureData.id);
-      const buttonAddToFavoriteClasses = cn ('user-actions__item', 'user-actions__item--add-to-favorite', 'btn', {
+      const buttonUpdateFavoriteListClasses = cn ('user-actions__item', 'user-actions__item--favorite', 'btn', {
         'user-actions__item--included-in-favorite': IdPresenceInfoInFavoriteList === 'included',
       });
       return (
@@ -80,7 +80,7 @@ const Photos = ({ picturesData }) => {
                 <p className="picture__user-actions user-actions">
                   <button
                     type="button"
-                    className={buttonAddToFavoriteClasses}
+                    className={buttonUpdateFavoriteListClasses}
                     onClick={handleUpdateFavoritePicturesIds(pictureData.id)}
                   >
                     <svg className="user-actions__icon user-actions__icon--favorite" width="27" height="21" viewBox="0 0 23 21"  xmlns="http://www.w3.org/2000/svg">

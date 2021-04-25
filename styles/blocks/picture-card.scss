@@ -42,6 +42,21 @@
   height: 41px;
 }
 
+.picture-card__button--included-in-favorite {
+  .picture-card__icon--favorite {
+    fill: $color-favorite-icon-bg;
+  }
+
+  &:hover .picture-card__icon--favorite,
+  &:focus .picture-card__icon--favorite {
+    fill: $color-favorite-icon-bg-hover;
+  }
+
+  &:active .picture-card__icon {
+    fill: $color-favorite-icon-bg-active;
+  }
+}
+
 .picture-card__button--download {
   width: 41px;
   height: 41px;
@@ -59,7 +74,7 @@
 }
 
 .picture-card__icon {
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .picture-card__icon--favorite {
