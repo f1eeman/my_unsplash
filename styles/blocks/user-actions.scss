@@ -7,24 +7,45 @@
   margin-bottom: 0;
 }
 
-.user-actions__item {
-  color: $secondary-color-text;
+.user-actions__icon {
+  fill: $color-icon-third-bg;
+  transition: fill 0.2s ease;
+}
 
-  &:hover,
-  &:focus {
-    color: $secondary-color-text-hover;
+.user-actions__item {
+  &:hover .user-actions__icon,
+  &:focus .user-actions__icon {
+    fill: $color-icon-third-bg-hover;
   }
 
-  &:active {
-    color: $secondary-color-text-active;
+  &:active .user-actions__icon {
+    fill: $color-icon-third-bg-hover;
   }
 }
 
 .user-actions__item--add-to-favorite {
-  width: 25px;
+  width: 27px;
   height: 21px;
+}
 
-  color: $secondary-color-text;
+.user-actions__icon--favorite {
+  width: 27px;
+  height: 21px;
+}
+
+.user-actions__item--included-in-favorite {
+  .user-actions__icon {
+    fill: $color-favorite-icon-bg;
+  }
+
+  &:hover .user-actions__icon,
+  &:focus .user-actions__icon {
+    fill: $color-favorite-icon-bg-hover;
+  }
+
+  &:active .user-actions__icon {
+    fill: $color-favorite-icon-bg-hover;
+  }
 }
 
 .user-actions__item--maximize {
@@ -32,7 +53,17 @@
   height: 36px;
 }
 
+.user-actions__icon--maximize {
+  width: 37px;
+  height: 36px;
+}
+
 .user-actions__item--download {
+  width: 20px;
+  height: 26px;
+}
+
+.user-actions__icon--download {
   width: 20px;
   height: 26px;
 }

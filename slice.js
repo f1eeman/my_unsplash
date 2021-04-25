@@ -11,14 +11,7 @@ const favoriteItemsSlice = createSlice({
       state.ids.push(id);
     },
     removeFromFavorite(state, { payload: { id } }) {
-      state.ids = state.ids.filter((itemId) => {
-        console.log('itemId', itemId);
-        console.log('id', id);
-        console.log('itemId typeof', typeof itemId);
-        console.log('id typeof', typeof id);
-        return itemId !== id
-      })
-      console.log(state.ids);
+      state.ids = state.ids.filter((itemId) => itemId !== id);
     },
   },
 });

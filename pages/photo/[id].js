@@ -36,7 +36,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const pictureItem = getPictureDataById(params.id);
-  console.log('pictureItem', pictureItem);
   const authorInfo = getPictureAuthorById(pictureItem.authorId);
   const similarPictures = getPicturesDataByTags(pictureItem.tags);
   return {
