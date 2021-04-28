@@ -1,0 +1,39 @@
+.scroll-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 8px;
+  box-shadow: 0 0 4px $color-shadow-icons;
+
+  &:hover .scroll-up-icon,
+  &:focus .scroll-up-icon {
+    transform: scale(1.1);
+  }
+
+  &:active .scroll-up-icon {
+    opacity: $opacity-down;
+  }
+}
+
+.scroll-up__icon {
+  width: 14px;
+  height: 14px;
+
+  fill: $color-icon-secondary-bg;
+  transition: transform 0.2s ease;
+}
+
+@media (min-width: $desktop-width) {
+  .scroll-up {
+    width: 50px;
+    height: 50px;
+  }
+
+  .scroll-up__icon {
+    width: 50px;
+    height: 50px;
+  }
+}

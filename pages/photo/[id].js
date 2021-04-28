@@ -1,5 +1,6 @@
 import MainLayout from '../../components/MainLayout';
 import PhotoCard from '../../components/PhotoCard';
+import ScrollUpButton from '../../components/ScrollUpButton';
 import {
   getAllPicturesIds,
   getPictureDataById,
@@ -24,6 +25,7 @@ const Photo = ({ pictureItem, authorInfo, similarPictures }) => {
         authorInfo={authorInfo}
         similarPictures={similarPictures}
       />
+      <ScrollUpButton parentClass="similar-pictures"/>
     </MainLayout>
   );
 };

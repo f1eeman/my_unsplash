@@ -31,7 +31,7 @@ const PhotoCard = ({
   };
 
   const IdPresenceInfoInFavoriteList = getIdPresenceInfoInFavoriteList(pictureItem.id);
-  const buttonUpdateFavoriteListClasses = cn (
+  const buttonUpdateFavoriteListClasses = cn(
     'picture-card__button',
     'picture-card__button--favorite',
     'btn',
@@ -241,7 +241,6 @@ const PhotoCard = ({
         <div className="container container--fix">
           <h2 className="similar-pictures__title">Похожие фотографии</h2>
           {renderSimilarPhotos(tags)}
-          {renderScrollUpButton()}
         </div>
       </section>
     </>
