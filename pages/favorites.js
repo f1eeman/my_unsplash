@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import Photos from '../components/Photos';
 import MainLayout from '../components/MainLayout';
-import ScrollUpButton from '../components/ScrollUpButton';
 import { getPictureDataById } from '../utilities';
 
 const Favourites = () => {
@@ -17,7 +16,7 @@ const Favourites = () => {
 
   return (
     <MainLayout mainTitle={mainTitle} thisPage="favoritesPage" >
-      <Photos picturesData={picturesData}/>
+      <Photos picturesData={picturesData} favoritePage />
     </MainLayout>
   )
 };

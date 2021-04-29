@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const favoriteItemsSlice = createSlice({
   name: 'favoriteItems',
   initialState: {
-    ids: [1, 2, 3, 4, 5, 9, 10],
+    ids: [1, 2, 3, 4, 8, 9, 10, 15, 16, 17],
   },
   reducers: {
     addToFavorite(state, { payload: { id } }) {

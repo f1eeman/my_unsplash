@@ -12,7 +12,7 @@ const Home = ({ picturesData }) => {
   return (
     <MainLayout mainTitle={mainTitle} thisPage="searchPage">
       <Searching />
-      <Photos picturesData={picturesData}/>
+      <Photos picturesData={picturesData} mainPage />
     </MainLayout>
   );
 }

@@ -28,7 +28,7 @@
   }
 
   .pictures__scroll-up-wrap {
-    width: 476px;
+    width: auto;
   }
 
   .pictures__toggle-view-box {
@@ -125,6 +125,10 @@
       margin-left: 18px;
       margin-right: 0;
     }
+  }
+
+  .pictures__wrapper--gallery.pictures__wrapper--favorite {
+    height: 1800px;
   }
 }
 

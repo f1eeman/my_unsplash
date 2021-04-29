@@ -6,7 +6,7 @@ import cn from 'classnames';
 import { addToFavorite, removeFromFavorite } from '../slice';
 import ScrollUpButton from './ScrollUpButton';
 
-const Photos = ({ picturesData, mainPage = null }) => {
+const Photos = ({ picturesData, favoritePage = null, mainPage = null }) => {
   const dispatch = useDispatch();
   const favoritesPicturesIdsList = useSelector((state) => state.favoriteItems.ids);
   const [picturesView, setPicturesView] = useState('list');
@@ -33,8 +33,9 @@ const Photos = ({ picturesData, mainPage = null }) => {
   };
 
   const picturesListClasses = cn('pictures__wrapper', {
-    'pictures__wrapper--list': picturesView === 'list',
     'pictures__wrapper--gallery': picturesView === 'gallery',
+    'pictures__wrapper--list': picturesView === 'list',
+    'pictures__wrapper--favorite': favoritePage === true && picturesView === 'gallery',
   });
 
   const buttonToggleViewListClasses = cn('pictures__toggle-view', 'pictures__toggle-view--list', {
