@@ -1,6 +1,5 @@
 import MainLayout from '../../components/MainLayout';
 import PhotoCard from '../../components/PhotoCard';
-import ScrollUpButton from '../../components/ScrollUpButton';
 import {
   getAllPicturesIds,
   getPictureDataById,
@@ -9,9 +8,6 @@ import {
 } from '../../utilities';
 
 const Photo = ({ pictureItem, authorInfo, similarPictures }) => {
-  const handleClick = (id) => () => {
-    console.log('id', id);
-  };
   const mainTitle = {
     text: 'Страница картинки',
     visability: 'hidden',
@@ -21,11 +17,9 @@ const Photo = ({ pictureItem, authorInfo, similarPictures }) => {
     <MainLayout mainTitle={mainTitle} thisPage="innerPage" >
       <PhotoCard
         pictureItem={pictureItem}
-        handleClick={handleClick(pictureItem.id)}
         authorInfo={authorInfo}
         similarPictures={similarPictures}
       />
-      <ScrollUpButton parentClass="similar-pictures"/>
     </MainLayout>
   );
 };

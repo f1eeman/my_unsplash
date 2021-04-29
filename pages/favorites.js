@@ -18,7 +18,6 @@ const Favourites = () => {
   return (
     <MainLayout mainTitle={mainTitle} thisPage="favoritesPage" >
       <Photos picturesData={picturesData}/>
-      <ScrollUpButton parentClass="similar-pictures"/>
     </MainLayout>
   )
 };

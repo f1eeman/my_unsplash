@@ -1,14 +1,34 @@
 .pictures {
   padding-top: 81px;
+  padding-bottom: 30px;
+}
+
+.pictures__wrapper {
+  margin-bottom: 20px;
 }
 
 .pictures__toggle-view-box {
   display: none;
 }
 
+.pictures__scroll-up-wrap {
+  display: flex;
+  justify-content: flex-end;
+  width: 330px;
+  margin: 0 auto;
+}
+
 @media (min-width: 720px) {
   .pictures {
     padding-top: 29px;
+  }
+
+  .pictures__wrapper {
+    margin-bottom: 40px;
+  }
+
+  .pictures__scroll-up-wrap {
+    width: 476px;
   }
 
   .pictures__toggle-view-box {
@@ -109,6 +129,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .pictures {
+    padding-bottom: 60px;
+}
+
   .pictures__wrapper--gallery {
     height: 5050px;
   }

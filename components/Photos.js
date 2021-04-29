@@ -4,8 +4,9 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import cn from 'classnames';
 import { addToFavorite, removeFromFavorite } from '../slice';
+import ScrollUpButton from './ScrollUpButton';
 
-const Photos = ({ picturesData }) => {
+const Photos = ({ picturesData, mainPage = null }) => {
   const dispatch = useDispatch();
   const favoritesPicturesIdsList = useSelector((state) => state.favoriteItems.ids);
   const [picturesView, setPicturesView] = useState('list');
@@ -131,6 +132,7 @@ const Photos = ({ picturesData }) => {
         <div className={picturesListClasses}>
           {renderPictures()}
         </div>
+        {mainPage ? null : <ScrollUpButton parentClass="pictures"/>}
       </div>
     </section>
   );
