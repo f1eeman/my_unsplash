@@ -5,8 +5,8 @@ const Scrollable = ({ children, _class }) => {
   const [scrollingPosition, setScrollingPosition] = useState('end');
   const ref = useRef();
   const classes = cn('search__wrapper', {
-    'search__wrapper--shadow-start': scrollingPosition === 'end' || scrollingPosition === 'center',
-    'search__wrapper--shadow-end': scrollingPosition === 'start' || scrollingPosition === 'center',
+    'search__wrapper--shadow-start': scrollingPosition !== 'start',
+    'search__wrapper--shadow-end': scrollingPosition !== 'end',
   })
 
   // eslint-disable-next-line consistent-return
@@ -16,24 +16,21 @@ const Scrollable = ({ children, _class }) => {
       const handleWheel = (e) => {
         e.preventDefault();
         el.scrollTo({
-          left: el.scrollLeft + e.deltaY * 40,
+          left: el.scrollLeft + e.deltaY * 3,
           behavior: 'smooth',
         });
-        // console.log('e.deltaY', e.deltaY);
-        // console.log('el.scrollLeft', el.scrollLeft);
-        // console.log('el', el);
+
         if (el.scrollLeftMax <= el.scrollLeft) {
           setScrollingPosition('end');
-          // console.log('end');
         }
+
         if (el.scrollLeft <= 10) {
           setScrollingPosition('start');
-          // console.log('start');
         }
-        if (scrollingPosition !== 'center') {
+
+        if (el.scrollLeftMax > el.scrollLeft && el.scrollLeft > 10) {
           setScrollingPosition('center');
         }
-        // console.log('scrollingPosition', scrollingPosition);
       };
 
       el.addEventListener('wheel', handleWheel);

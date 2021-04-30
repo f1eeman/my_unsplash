@@ -18,6 +18,22 @@
   margin: 0 auto;
 }
 
+.pictures__loader-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.pictures__loader {
+  transform-origin: center;
+
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 @media (min-width: 720px) {
   .pictures {
     padding-top: 29px;
