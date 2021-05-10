@@ -12,8 +12,8 @@
   overflow: hidden;
   border-radius: 8px;
 
-  &:hover .picture__link,
-  &:focus .picture__link {
+  &:hover .picture__hover-box,
+  &:focus .picture__hover-box {
     display: flex;
   }
 
@@ -23,7 +23,7 @@
   }
 }
 
-.picture__link {
+.picture__hover-box {
   position: absolute;
   top: 0;
   right: 0;
@@ -43,7 +43,7 @@
   z-index: 10;
 }
 
-.picture__box {
+.picture__image-box {
   width: 330px;
 }
 
@@ -88,7 +88,7 @@
     width: 476px;
   }
 
-  .picture__box {
+  .picture__image-box {
     width: 476px;
   }
 

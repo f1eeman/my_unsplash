@@ -54,17 +54,17 @@ const Photos = ({ picturesData, favoritePage = null, mainPage = null }) => {
       });
       return (
         <div className="pictures__item picture" key={pictureData.id}>
-          <div className="picture__box">
-            <picture >
-              <source type="image/webp" media="(min-width: 1560px)" srcSet={pictureData.path.desktopView.webp}/>
-              <source type="image/webp" srcSet={pictureData.path.mobileView.webp} />
-              <source media="(min-width: 1560px)" srcSet={pictureData.path.desktopView.jpg} />
-              <img className="picture__image" src={pictureData.path.mobileView.jpg} alt={pictureData.alt} />
-            </picture>
-          </div>
-          <div className="picture__hover-box">
-            <Link href="/photo/[id]" as={`/photo/${pictureData.id}`}>
-              <a className="picture__link">
+          <Link href="/photo/[id]" as={`/photo/${pictureData.id}`}>
+            <a className="picture__link">
+              <div className="picture__image-box">
+                <picture >
+                  <source type="image/webp" media="(min-width: 1560px)" srcSet={pictureData.path.desktopView.webp}/>
+                  <source type="image/webp" srcSet={pictureData.path.mobileView.webp} />
+                  <source media="(min-width: 1560px)" srcSet={pictureData.path.desktopView.jpg} />
+                  <img className="picture__image" src={pictureData.path.mobileView.jpg} alt={pictureData.alt} />
+                </picture>
+              </div>
+              <div className="picture__hover-box">
                 <p className="picture__author-avatar-wrapper">
                   <picture >
                     <source media="(min-width: 1560px)" srcSet='images/avatar-desktop.jpg' />
@@ -103,9 +103,9 @@ const Photos = ({ picturesData, favoritePage = null, mainPage = null }) => {
                     </svg>
                     </button>
                 </p>
-              </a>
-            </Link>
-          </div>
+              </div>
+            </a>
+          </Link>
         </div>
       );
       }));

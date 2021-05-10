@@ -40,6 +40,18 @@ const PhotoCard = ({
     'picture-card__button--included-in-favorite': IdPresenceInfoInFavoriteList === 'included',
   });
 
+  const getClasses = (picId) => {
+    const IdInfo = getIdPresenceInfoInFavoriteList(picId);
+    const buttonUpdateFavoriteListClasses2 = cn(
+      'user-actions__item',
+      'user-actions__item--add-to-favorite',
+      'btn',
+      {
+      'user-actions__item--included-in-favorite': IdInfo === 'included',
+    });
+    return buttonUpdateFavoriteListClasses2;
+  }
+
   const renderAuthorBlock = () => (
       <div className="picture-card__author author">
         <p className="author__avatar-wrap author__avatar-wrap--card">
@@ -105,17 +117,17 @@ const PhotoCard = ({
           }
           return (
             <div className="similar-pictures__item picture" key={pictureData.id}>
-              <div className="picture__box">
-                <picture >
-                  <source type="image/webp" media="(min-width: 1560px)" srcSet={pictureData.path.desktopView.webp}/>
-                  <source type="image/webp" srcSet={pictureData.path.mobileView.webp} />
-                  <source media="(min-width: 1560px)" srcSet={pictureData.path.desktopView.jpg} />
-                  <img className="picture__image" src={pictureData.path.mobileView.jpg} alt={pictureData.alt} />
-                </picture>
-              </div>
-              <div className="picture__hover-box">
-                <Link href="/photo/[id]" as={`/photo/${pictureData.id}`}>
-                  <a className="picture__link">
+              <Link href="/photo/[id]" as={`/photo/${pictureData.id}`}>
+                <a className="picture__link">
+                  <div className="picture__image-box">
+                    <picture >
+                      <source type="image/webp" media="(min-width: 1560px)" srcSet={pictureData.path.desktopView.webp}/>
+                      <source type="image/webp" srcSet={pictureData.path.mobileView.webp} />
+                      <source media="(min-width: 1560px)" srcSet={pictureData.path.desktopView.jpg} />
+                      <img className="picture__image" src={pictureData.path.mobileView.jpg} alt={pictureData.alt} />
+                    </picture>
+                  </div>
+                  <div className="picture__hover-box">
                     <p className="picture__author-avatar-wrapper">
                       <picture >
                         <source media="(min-width: 1560px)" srcSet={authorInfo.avatarPath.desktopView} />
@@ -133,7 +145,8 @@ const PhotoCard = ({
                     <p className="picture__user-actions user-actions">
                       <button
                         type="button"
-                        className="user-actions__item user-actions__item--add-to-favorite btn"
+                        className={getClasses(pictureData.id)}
+                        onClick={handleUpdateFavoritePicturesIds(pictureData.id)}
                       >
                         <svg className="user-actions__icon" width="23" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
                           <path d="M13.0516 20.2443C12.1779 21.0597 10.8329 21.0597 9.95928 20.2325L9.83283 20.1143C3.79765 14.501 -0.145337 10.8257 0.00410514 6.24047C0.0730786 4.23147 1.07319 2.30521 2.69407 1.17072C5.7289 -0.956453 9.47646 0.0362259 11.4997 2.47065C13.5229 0.0362259 17.2705 -0.96827 20.3053 1.17072C21.9262 2.30521 22.9263 4.23147 22.9953 6.24047C23.1562 10.8257 19.2017 14.501 13.1665 20.138L13.0516 20.2443Z"/>
@@ -153,9 +166,9 @@ const PhotoCard = ({
                         </svg>
                       </button>
                     </p>
-                  </a>
-                </Link>
-              </div>
+                  </div>
+                </a>
+              </Link>
             </div>
           );
         })}
